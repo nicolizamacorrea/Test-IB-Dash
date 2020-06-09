@@ -5,6 +5,7 @@ numpy
 pandas
 sklearn
 gunicorn
+flask
 dash-renderer
 dash-html-components
 dash-core-components

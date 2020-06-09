@@ -167,7 +167,7 @@ def update_prediction(X1, X2, X3):
 
 if __name__ == "__main__":
     #app.run_server()
-    app.run_server(debug=True, threaded=True)
+    app.run_server()
     
     
 
