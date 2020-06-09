@@ -16,7 +16,7 @@ col_names=[
 import pandas as pd
 import numpy as np
 import math
-import xgboost as xgb
+
 import plotly.graph_objects as go
 from sklearn.model_selection import train_test_split
 import dash
@@ -164,7 +164,7 @@ def update_prediction(X1, X2, X3):
 
 if __name__ == "__main__":
     #app.run_server()
-    app.run_server( port=8077)
+    app.run_server(debug=True, threaded=True)
     
     
 

@@ -1,11 +1,10 @@
+plotly
 dash
 dash-daq
 numpy
 pandas
-xgboost
 sklearn
 gunicorn
-plotly
 dash-renderer
 dash-html-components
 dash-core-components
