@@ -1,7 +1,7 @@
 plotly
 dash
 dash-daq
-numpy==1.11.0
+numpy
 pandas
 sklearn
 gunicorn

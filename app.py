@@ -68,19 +68,19 @@ fig_features_importance.add_trace(go.Bar(x=df_feature_importances.index,
 fig_features_importance.update_layout(title_text='<b>Features Importance of the model<b>', title_x=0.5)
 
 slider_1_label = df_feature_importances.index[0]
-slider_1_min = math.floor( df2[slider_1_label].min())
+slider_1_min = int(math.floor( df2[slider_1_label].min()))
 slider_1_mean = round( df2[slider_1_label].mean())
-slider_1_max = round(df2[slider_1_label].max())
+slider_1_max = int(round(df2[slider_1_label].max()))
 
 slider_2_label = df_feature_importances.index[1]
-slider_2_min = math.floor( df2[slider_2_label].min())
+slider_2_min = int(math.floor( df2[slider_2_label].min()))
 slider_2_mean = round( df2[slider_2_label].mean())
-slider_2_max = round( df2[slider_2_label].max())
+slider_2_max = int(round( df2[slider_2_label].max()))
 
 slider_3_label = df_feature_importances.index[2]
-slider_3_min = math.floor( df2[slider_3_label].min())
+slider_3_min = int(math.floor( df2[slider_3_label].min()))
 slider_3_mean = round( df2[slider_3_label].mean())
-slider_3_max = round( df2[slider_3_label].max())
+slider_3_max = int(round( df2[slider_3_label].max()))
 
 
 # In[7]:
