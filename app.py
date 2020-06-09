@@ -4,19 +4,22 @@
 # In[1]:
 
 
-col_names=[
+col_names=['IB_avg',
 'FE_SAWDUST_RATIO',
 'FE_THIRD_COMPRESION',
 'FE_PRESSURE_14_15']
 
-
+col_names1=[
+'FE_SAWDUST_RATIO',
+'FE_THIRD_COMPRESION',
+'FE_PRESSURE_14_15']
 # In[2]:
 
 
 import pandas as pd
 import numpy as np
 import math
-
+import plotly
 import plotly.graph_objects as go
 from sklearn.model_selection import train_test_split
 import dash
@@ -34,9 +37,9 @@ df1 = df[col_names]
 
 # We change the most important features ranges to make them look like actual figures
 
-df1["Y"] = df['IB_avg']
+
 df2 = df1.fillna(method='ffill').astype(np.float32)
-X_train, X_test, y_train, y_test = train_test_split(df2.drop("Y", axis=1), df2["Y"], test_size=0.33, random_state=7)
+X_train, X_test, y_train, y_test = train_test_split(df2.drop("IB_avg", axis=1), df2["IB_avg"], test_size=0.33, random_state=7)
 
 
 # In[3]:
@@ -48,7 +51,7 @@ model = RandomForestRegressor()
 
 model.fit(X_train, y_train)
 
-df_feature_importances = pd.DataFrame(model.feature_importances_*100,columns=["Importance"],index=col_names)
+df_feature_importances = pd.DataFrame(model.feature_importances_*100,columns=["Importance"],index=col_names1)
 df_feature_importances = df_feature_importances.sort_values("Importance", ascending=False)
 
 
